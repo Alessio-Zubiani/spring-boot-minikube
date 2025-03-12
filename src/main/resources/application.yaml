@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+minio:
+  url: http://localhost:9000
+  access:
+    name: minioadmin
+    secret: minioadmin
+  bucket:
+    name: alessio
