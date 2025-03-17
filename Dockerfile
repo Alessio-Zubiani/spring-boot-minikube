@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the packaged JAR file into the container
-COPY target/spring-boot-minikube-${project.version}.jar /app/spring-boot-minikube.jar
+COPY target/spring-boot-minikube-1.0.2.jar /app/spring-boot-minikube.jar
 
 # Specify the command to run your application
 CMD ["java", "-jar", "spring-boot-minikube.jar"]
