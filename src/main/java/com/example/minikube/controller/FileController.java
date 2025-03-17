@@ -26,7 +26,7 @@ public class FileController {
 		
 		log.info("Called [helloWorld] Rest API");
 		
-		return ResponseEntity.ok().body("Hello world. First Kubernetes project");
+		return ResponseEntity.ok().body("Example for logging into kubernetes console");
 	}
 	
 	/*@PostMapping
