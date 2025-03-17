@@ -1,4 +1,5 @@
-package com.example.minio.service.impl;
+package com.example.minikube.service.impl;
+/*package com.example.minio.service.impl;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -51,3 +52,4 @@ public class FileServiceImpl implements FileService {
 	}
 	
 }
+*/

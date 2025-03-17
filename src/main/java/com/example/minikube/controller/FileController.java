@@ -1,6 +1,6 @@
-package com.example.minio.controller;
+package com.example.minikube.controller;
 
-import com.example.minio.service.FileService;
+import com.example.minikube.service.FileService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,20 +15,20 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class FileController {
 	
-	private final FileService fileService;
-	
-	
+	//private final FileService fileService;
+
+
 	@GetMapping
 	public ResponseEntity<String> helloWorld() {
 		
 		return ResponseEntity.ok().body("Hello world. First Kubernetes project");
 	}
 	
-	@PostMapping
+	/*@PostMapping
 	public ResponseEntity<String> uploadFile() {
 		
 		this.fileService.uploadFile();
 		return ResponseEntity.ok().build();
-	}
+	}*/
 
 }

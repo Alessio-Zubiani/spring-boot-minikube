@@ -1,4 +1,4 @@
-package com.example.minio.service;
+package com.example.minikube.service;
 
 public interface FileService {
 	

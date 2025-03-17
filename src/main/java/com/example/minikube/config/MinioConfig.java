@@ -1,4 +1,5 @@
-package com.example.minio.config;
+package com.example.minikube.config;
+/*package com.example.minio.config;
 
 import com.example.minio.properties.Minio;
 
@@ -23,3 +24,4 @@ public class MinioConfig {
     }
 	
 }
+*/

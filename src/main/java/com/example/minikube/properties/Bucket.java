@@ -1,4 +1,4 @@
-package com.example.minio.properties;
+package com.example.minikube.properties;
 
 import org.springframework.stereotype.Component;
 
@@ -9,9 +9,8 @@ import lombok.Setter;
 @Setter
 
 @Component
-public class Access {
+public class Bucket {
 	
 	private String name;
-	private String secret;
 
 }

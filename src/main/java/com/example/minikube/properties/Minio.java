@@ -1,4 +1,4 @@
-package com.example.minio.properties;
+package com.example.minikube.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
