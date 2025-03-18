@@ -1,6 +1,15 @@
 server:
   port: 8080
   shutdown: graceful
+  
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:oracle:thin:@oratest.popso.it:1521/oltptestsrv.popso.it
+    username: BICOMP
+    password: BICOMP_9471
+    driver-class-name: oracle.jdbc.OracleDriver
 
 minio:
   url: http://localhost:9000
