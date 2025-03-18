@@ -13,7 +13,7 @@
 	
 	<groupId>com.example.minikube</groupId>
 	<artifactId>spring-boot-minikube</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.0</version>
 	
 	<name>spring-boot-minio</name>
 	<description>SpringBoot MiniKube</description>
