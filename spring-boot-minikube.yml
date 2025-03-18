@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-minikube-app
-          image: alessiozubiani1996/spring-boot-minikube:1.0.0
+          image: alessiozubiani1996/spring-boot-minikube:1.0.3
           ports:
             - containerPort: 8080
 ---
