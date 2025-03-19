@@ -2,14 +2,40 @@ server:
   port: 8080
   shutdown: graceful
   
-spring:
-  jpa:
-    show-sql: true
+#spring:
+#  jpa:
+#    show-sql: true
+#  datasource:
+#    url: jdbc:oracle:thin:@oratest.popso.it:1521/oltptestsrv.popso.it
+#    username: BICOMP
+#    password: BICOMP_9471
+#    driver-class-name: oracle.jdbc.OracleDriver
+
+#=============================================================
+# Bicomp parameters
+#=============================================================
+bicomp:
   datasource:
     url: jdbc:oracle:thin:@oratest.popso.it:1521/oltptestsrv.popso.it
     username: BICOMP
     password: BICOMP_9471
-    driver-class-name: oracle.jdbc.OracleDriver
+  hibernate:
+    dialect: oracle.jdbc.OracleDriver
+    show-sql: false
+    format-sql: false
+    
+#=============================================================
+# T2C parameters
+#=============================================================
+t2c:
+  datasource:
+    url: jdbc:oracle:thin:@oratest.popso.it:1521/osptestsrv.popso.it
+    username: TLM_T2C
+    password: TLM_T2C_1246
+  hibernate:
+    dialect: org.hibernate.dialect.OracleDialect
+    show-sql: false
+    format-sql: false
 
 minio:
   url: http://localhost:9000
