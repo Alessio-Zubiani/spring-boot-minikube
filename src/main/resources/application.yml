@@ -19,8 +19,9 @@ bicomp:
     url: jdbc:oracle:thin:@oratest.popso.it:1521/oltptestsrv.popso.it
     username: BICOMP
     password: BICOMP_9471
+    driver: oracle.jdbc.OracleDriver
   hibernate:
-    dialect: oracle.jdbc.OracleDriver
+    dialect: org.hibernate.dialect.OracleDialect
     show-sql: false
     format-sql: false
     
@@ -32,6 +33,7 @@ t2c:
     url: jdbc:oracle:thin:@oratest.popso.it:1521/osptestsrv.popso.it
     username: TLM_T2C
     password: TLM_T2C_1246
+    driver: oracle.jdbc.OracleDriver
   hibernate:
     dialect: org.hibernate.dialect.OracleDialect
     show-sql: false

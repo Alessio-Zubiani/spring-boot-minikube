@@ -44,7 +44,7 @@ public class T2cJdbcConfig {
 		log.info("Connecting to schema: [{}]", this.config.getDatasource().getUsername());
 		
 		DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName(this.config.getHibernate().getDialect());
+        dataSourceBuilder.driverClassName(this.config.getDatasource().getDriver());
         dataSourceBuilder.url(this.config.getDatasource().getUrl());
         dataSourceBuilder.username(this.config.getDatasource().getUsername());
         dataSourceBuilder.password(this.config.getDatasource().getPassword());
