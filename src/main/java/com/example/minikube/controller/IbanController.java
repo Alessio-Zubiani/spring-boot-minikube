@@ -25,7 +25,7 @@ public class IbanController {
 	
 	
 	@GetMapping("{codiceControparte}")
-	public ResponseEntity<List<EurCommonIbanBeneficiario>> getIbansByCodiceControparte(@PathVariable("id") String codiceControparte) {
+	public ResponseEntity<List<EurCommonIbanBeneficiario>> getIbansByCodiceControparte(@PathVariable("codiceControparte") String codiceControparte) {
 		
 		log.info("Called [getIbansByCodiceControparte] Rest API");
 		List<EurCommonIbanBeneficiario> ibans = this.ibanService.findByCodiceControparte(codiceControparte);
