@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 
 @Component
-@PropertySource(value = "classpath:application.yaml", factory = YamlPropertySourceFactory.class)
+@PropertySource(value = "classpath:application.yml", factory = YamlPropertySourceFactory.class)
 @ConfigurationProperties(prefix = "t2c")
 public class T2cHibernateConfig extends HibernateBaseEntity {
 	

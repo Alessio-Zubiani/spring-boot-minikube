@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 
 @Component
-@PropertySource(value = "classpath:application.yaml", factory = YamlPropertySourceFactory.class)
+@PropertySource(value = "classpath:application.yml", factory = YamlPropertySourceFactory.class)
 @ConfigurationProperties(prefix = "bicomp")
 public class BicompConfig extends HibernateBaseEntity {
 	
