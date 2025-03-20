@@ -59,7 +59,6 @@ public class BicompJdbcConfig {
 	public LocalContainerEntityManagerFactoryBean bicompEntityManager(EntityManagerFactoryBuilder builder, @Qualifier("bicompDataSource") DataSource bicompDataSource) {
 		
 		Map<String, String> properties = new HashMap<>();
-		//properties.put("hibernate.dialect", this.config.getHibernate().getDialect());
 		properties.put("hibernate.show_sql", this.config.getHibernate().getShowSql());
 		properties.put("hibernate.format_sql", this.config.getHibernate().getFormatSql());
 		

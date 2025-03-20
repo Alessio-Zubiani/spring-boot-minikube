@@ -56,7 +56,6 @@ public class SltJdbcConfig {
 	public LocalContainerEntityManagerFactoryBean sltEntityManager(EntityManagerFactoryBuilder builder, @Qualifier("sltDataSource") DataSource sltDataSource) {
 		
 		Map<String, String> properties = new HashMap<>();
-		//properties.put("hibernate.dialect", this.config.getHibernate().getDialect());
 		properties.put("hibernate.show_sql", this.config.getHibernate().getShowSql());
 		properties.put("hibernate.format_sql", this.config.getHibernate().getFormatSql());
 		
