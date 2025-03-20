@@ -56,7 +56,7 @@ public class T2cJdbcConfig {
 	public LocalContainerEntityManagerFactoryBean t2cEntityManager(EntityManagerFactoryBuilder builder, @Qualifier("t2cDataSource") DataSource t2cDataSource) {
 		
 		Map<String, String> properties = new HashMap<>();
-		properties.put("hibernate.dialect", this.config.getHibernate().getDialect());
+		//properties.put("hibernate.dialect", this.config.getHibernate().getDialect());
 		properties.put("hibernate.show_sql", this.config.getHibernate().getShowSql());
 		properties.put("hibernate.format_sql", this.config.getHibernate().getFormatSql());
 		
