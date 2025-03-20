@@ -39,6 +39,21 @@ t2c:
     show-sql: false
     format-sql: false
 
+#=============================================================
+# SLT parameters
+#=============================================================
+slt:
+  datasource:
+    url: jdbc:db2://db2svi.popso.it:50000/DB2S
+    username: SLTW01
+    password: SLTWEB
+    driver: com.ibm.db2.jcc.DB2Driver
+  hibernate:
+    dialect: org.hibernate.dialect.DB2Dialect
+    show-sql: false
+    format-sql: false
+
+
 minio:
   url: http://localhost:9000
   access:
