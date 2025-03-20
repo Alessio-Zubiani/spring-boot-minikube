@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: spring-boot-minikube-app-secret
+type: Opaque
+data:
+  bicomp-username: QklDT01Q
+  bicomp-password: QklDT01QXzk0NzE=
+  t2c-username: VExNX1QyQw==
+  t2c-password: VExNX1QyQ18xMjQ2
+  slt-username: U0xUVzAx
+  slt-password: U0xUV0VC  
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,9 +27,40 @@ spec:
     spec:
       containers:
         - name: spring-boot-minikube-app
-          image: alessiozubiani1996/spring-boot-minikube:1.0.10
+          image: alessiozubiani1996/spring-boot-minikube:1.0.11
           ports:
             - containerPort: 8080
+          env:
+            - name: BICOMP_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: bicomp-username
+            - name: BICOMP_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: bicomp-password
+            - name: T2C_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: t2c-username
+            - name: T2C_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: t2c-password
+            - name: SLT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: slt-username
+            - name: SLT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: slt-password
 ---
 apiVersion: v1
 kind: Service
