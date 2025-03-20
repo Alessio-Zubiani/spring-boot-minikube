@@ -63,7 +63,7 @@ public class SltJdbcConfig {
 		return builder
 				.dataSource(sltDataSource)
 				.properties(properties)
-				.packages("com.example.minikube.slt.model")
+				.packages("com.example.minikube.slt.entity")
 				.persistenceUnit("slt")
 				.build();
 	}
