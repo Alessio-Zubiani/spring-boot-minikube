@@ -4,10 +4,13 @@ metadata:
   name: spring-boot-minikube-app-secret
 type: Opaque
 data:
+  bicomp-db-url: jdbc:oracle:thin:@oratest.popso.it:1521/oltptestsrv.popso.it
   bicomp-username: QklDT01Q
   bicomp-password: QklDT01QXzk0NzE=
+  t2c-db-url: jdbc:oracle:thin:@oratest.popso.it:1521/osptestsrv.popso.it
   t2c-username: VExNX1QyQw==
   t2c-password: VExNX1QyQ18xMjQ2
+  slt-db-url: jdbc:db2://db2svi.popso.it:50000/DB2S
   slt-username: U0xUVzAx
   slt-password: U0xUV0VC  
 ---
@@ -31,6 +34,11 @@ spec:
           ports:
             - containerPort: 8080
           env:
+            - name: BICOMP_DB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: bicomp-db-url
             - name: BICOMP_USERNAME
               valueFrom:
                 secretKeyRef:
@@ -41,6 +49,11 @@ spec:
                 secretKeyRef:
                   name: spring-boot-minikube-app-secret
                   key: bicomp-password
+            - name: T2C_DB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: t2c-db-url
             - name: T2C_USERNAME
               valueFrom:
                 secretKeyRef:
@@ -51,6 +64,11 @@ spec:
                 secretKeyRef:
                   name: spring-boot-minikube-app-secret
                   key: t2c-password
+            - name: SLT_DB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: spring-boot-minikube-app-secret
+                  key: slt-db-url
             - name: SLT_USERNAME
               valueFrom:
                 secretKeyRef:

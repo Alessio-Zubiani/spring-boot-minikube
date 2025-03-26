@@ -7,7 +7,7 @@ server:
 #=============================================================
 bicomp:
   datasource:
-    url: jdbc:oracle:thin:@oratest.popso.it:1521/oltptestsrv.popso.it
+    url: ${BICOMP_DB_URL}
     username: ${BICOMP_USERNAME}
     password: ${BICOMP_PASSWORD}
     driver: oracle.jdbc.OracleDriver
@@ -20,7 +20,7 @@ bicomp:
 #=============================================================
 t2c:
   datasource:
-    url: jdbc:oracle:thin:@oratest.popso.it:1521/osptestsrv.popso.it
+    url: ${T2C_DB_URL}
     username: ${T2C_USERNAME}
     password: ${T2C_PASSWORD}
     driver: oracle.jdbc.OracleDriver
@@ -33,7 +33,7 @@ t2c:
 #=============================================================
 slt:
   datasource:
-    url: jdbc:db2://db2svi.popso.it:50000/DB2S
+    url: ${SLT_DB_URL}
     username: ${SLT_USERNAME}
     password: ${SLT_PASSWORD}
     driver: com.ibm.db2.jcc.DB2Driver
